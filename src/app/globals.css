@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFDF2;
+  --foreground: #1A202C;
+}
+
+@theme {
+  --color-poke-yellow: #FFCB05;
+  --color-poke-yellow-hover: #E5B604;
+  --color-poke-blue: #3B4CCA;
+  --color-poke-blue-hover: #2F3D9E;
+  --color-poke-dark-blue: #0A285F;
+  --color-poke-bg: #FFFDF2;
+  --color-poke-light-blue: #EBF8FF;
+  
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-16px);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-sans-kr), var(--font-jua), Arial, Helvetica, sans-serif;
+}
+
+.font-jua {
+  font-family: var(--font-jua), sans-serif;
+}
+
